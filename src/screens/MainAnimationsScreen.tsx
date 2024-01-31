@@ -7,10 +7,10 @@ export const MainAnimationsScreen = () => {
   return (
     <View>
       <Pressable onPress={() => navigation.navigate('Rive')}>
-        <Text>Animations</Text>
+        <Text>Rive</Text>
       </Pressable>
       <Pressable onPress={() => navigation.navigate('Lottie')}>
-        <Text>Animations</Text>
+        <Text>Lottie</Text>
       </Pressable>
     </View>
   );

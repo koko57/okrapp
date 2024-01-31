@@ -9,7 +9,10 @@ const Stack = createNativeStackNavigator<AnimationsStackParamList>();
 
 export const AnimationNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Stack.Screen name="MainAnimations" component={MainAnimationsScreen} />
       <Stack.Screen name="Rive" component={RiveScreen} />
       <Stack.Screen name="Lottie" component={LottieScreen} />
