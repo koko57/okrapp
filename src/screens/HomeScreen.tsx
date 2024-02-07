@@ -1,14 +1,16 @@
 import React from 'react';
-import {Pressable, Text, View} from 'react-native';
+import {View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {Button} from '../components/Button';
 
 export const HomeScreen = () => {
   const navigation = useNavigation();
   return (
     <View>
-      <Pressable onPress={() => navigation.navigate('Animations')}>
-        <Text>Animations</Text>
-      </Pressable>
+      <Button
+        onPress={() => navigation.navigate('Animations')}
+        text={'Animations'}
+      />
     </View>
   );
 };
