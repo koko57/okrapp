@@ -9,7 +9,10 @@ export const MainAnimationsScreen = () => {
     <View>
       <Button onPress={() => navigation.navigate('Rive')} text={'Rive'} />
       <Button onPress={() => navigation.navigate('Lottie')} text={'Lottie'} />
-      <Button onPress={() => navigation.navigate('PanAnimation')} text={'PanAnimation'} />
+      <Button
+        onPress={() => navigation.navigate('PanAnimation')}
+        text={'PanAnimation'}
+      />
     </View>
   );
 };

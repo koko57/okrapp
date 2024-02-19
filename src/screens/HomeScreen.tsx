@@ -11,6 +11,10 @@ export const HomeScreen = () => {
         onPress={() => navigation.navigate('Animations')}
         text={'Animations'}
       />
+      <Button
+        onPress={() => navigation.navigate('Notifications')}
+        text={'Notifications'}
+      />
     </View>
   );
 };
