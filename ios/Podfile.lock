@@ -1119,6 +1119,10 @@ PODS:
     - React-jsi (= 0.73.3)
     - React-logger (= 0.73.3)
     - React-perflogger (= 0.73.3)
+  - rive-react-native (6.2.3):
+    - React-Core
+    - RiveRuntime (= 5.5.1)
+  - RiveRuntime (5.5.1)
   - RNGestureHandler (2.15.0):
     - glog
     - RCT-Folly (= 2022.05.16.00)
@@ -1210,6 +1214,7 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - rive-react-native (from `../node_modules/rive-react-native`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -1230,6 +1235,7 @@ SPEC REPOS:
     - libevent
     - lottie-ios
     - OpenSSL-Universal
+    - RiveRuntime
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -1332,6 +1338,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  rive-react-native:
+    :path: "../node_modules/rive-react-native"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
@@ -1404,12 +1412,14 @@ SPEC CHECKSUMS:
   React-runtimescheduler: aa382ce525689b88459e1181b3649220f175dc31
   React-utils: b22b4a51aa578b3aac1e7c19501c0b9ba358ed79
   ReactCommon: e708b8be8cb317b83e31c6ccfeda8bf6c0d1a2b3
+  rive-react-native: 79777686cb29eaba6a28a0534fe82c8b8da41b4a
+  RiveRuntime: b57830ff73f406f3b4022f457b16690535ca4d05
   RNGestureHandler: deda62b8339496ba721a45e0f3e2d7a319932cee
   RNReanimated: 5589be82dc26b3f94738eb7c6b1f942787532b25
   RNScreens: b582cb834dc4133307562e930e8fa914b8c04ef2
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  Yoga: 08cd7601462818c4985bda7b205b9e6a92a7e66a
+  Yoga: ff0382b894475dba0b4d2a5fda860bfee5a9afad
 
-PODFILE CHECKSUM: 54fe443d60df13609ba182e7c757b23cd8bb1c58
+PODFILE CHECKSUM: 9af51b2945ee844e18176dff64d5cabb6ade9ea1
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.15.2
