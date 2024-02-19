@@ -7,10 +7,16 @@ declare global {
 export type RootStackParamList = {
   Home: undefined;
   Animations: undefined;
+  Notifications: undefined;
 };
 
 export type AnimationsStackParamList = {
   MainAnimations: undefined;
   Rive: undefined;
   Lottie: undefined;
+  PanAnimation: undefined;
+};
+
+export type NotificationsStackParamsList = {
+  MainNotifications: undefined;
 };

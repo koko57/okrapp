@@ -5,6 +5,7 @@ import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {HomeScreen} from './src/screens/HomeScreen';
 import {AnimationNavigator} from './src/navigators/AnimationsNavigator';
 import {RootStackParamList} from './src/types/navigation';
+import {NotificationsNavigator} from "./src/navigators/NotificationsNavigator.tsx";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -15,6 +16,7 @@ export const App = () => {
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Animations" component={AnimationNavigator} />
+          <Stack.Screen name="Notifications" component={NotificationsNavigator} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
