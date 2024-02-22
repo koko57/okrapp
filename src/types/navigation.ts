@@ -15,6 +15,7 @@ export type AnimationsStackParamList = {
   Rive: undefined;
   Lottie: undefined;
   PanAnimation: undefined;
+  Skia: undefined;
 };
 
 export type NotificationsStackParamsList = {
