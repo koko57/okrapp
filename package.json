@@ -13,6 +13,7 @@
     "@notifee/react-native": "^7.8.2",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
+    "@shopify/react-native-skia": "^0.1.240",
     "lottie-react-native": "^6.6.0",
     "react": "18.2.0",
     "react-native": "0.73.3",
