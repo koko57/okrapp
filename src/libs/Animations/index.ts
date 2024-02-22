@@ -41,6 +41,7 @@ export const useSharedValues = (...initVal: number[]) => {
   }, [mutable]);
   return mutable;
 };
+
 export const beatEasing = (x: number): number => {
   'worklet';
   const c4 = (2 * Math.PI) / 3;
