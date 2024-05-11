@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "820302936942",
+    "project_id": "okrapp-254fd",
+    "storage_bucket": "okrapp-254fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820302936942:android:6995b0678a42278c8c1f7f",
+        "android_client_info": {
+          "package_name": "com.okrapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX29YYDd0ttkhQ5Ka8QWc5jB7vImrL1BM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
