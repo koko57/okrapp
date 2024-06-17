@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
@@ -9,9 +9,8 @@ import {NotificationsNavigator} from './src/navigators/NotificationsNavigator.ts
 import {
   configureNotification,
   registerBackgroundHandler,
-  requestUserPermission
-} from "./src/libs/Notifications/firebase.ts";
-import {useEffect} from "react";
+  requestUserPermission,
+} from './src/libs/Notifications/firebase.ts';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
