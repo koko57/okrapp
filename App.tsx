@@ -8,17 +8,37 @@ import {RootStackParamList} from './src/types/navigation';
 import {NotificationsNavigator} from './src/navigators/NotificationsNavigator.tsx';
 import {
   configureNotification,
+  onNotificationOpenedApp,
   registerBackgroundHandler,
   requestUserPermission,
+  getFCMToken,
 } from './src/libs/Notifications/firebase.ts';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export const App = () => {
   useEffect(() => {
-    requestUserPermission();
+    async function setupFCM() {
+      await requestUserPermission();
+      const token = await getFCMToken();
+      console.log('FCM Token:', token);
+    }
+
+    setupFCM();
+
+    const unsubscribe = onNotificationOpenedApp(remoteMessage => {
+      console.log(
+        'Notification caused app to open from background state:',
+        remoteMessage,
+      );
+    });
+
     registerBackgroundHandler();
     configureNotification();
+
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   return (

@@ -1,7 +1,6 @@
 import messaging from '@react-native-firebase/messaging';
 import {Alert} from 'react-native';
 
-// Request permission to receive notifications
 export const requestUserPermission = async () => {
   const authStatus = await messaging().requestPermission();
   const enabled =
@@ -13,16 +12,34 @@ export const requestUserPermission = async () => {
   }
 };
 
-// Register background handler
+export const getFCMToken = async () => {
+  try {
+    const token = await messaging().getToken();
+    console.log('FCM Token:', token);
+    return token;
+  } catch (error) {
+    console.error('Failed to get FCM token:', error);
+    return null;
+  }
+};
+
 export const registerBackgroundHandler = () => {
   messaging().setBackgroundMessageHandler(async remoteMessage => {
     console.log('Message handled in the background!', remoteMessage);
   });
 };
 
-// Configure foreground notifications
 export const configureNotification = () => {
   messaging().onMessage(async remoteMessage => {
-    Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+    Alert.alert(
+      remoteMessage?.notification?.title ?? 'A new FCM message arrived!',
+      remoteMessage?.notification?.body ?? '',
+    );
   });
+};
+
+export const onNotificationOpenedApp = (
+  callback: (remoteMessage: any) => void,
+) => {
+  return messaging().onNotificationOpenedApp(callback);
 };
