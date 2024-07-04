@@ -3,7 +3,7 @@ import {View, Button} from 'react-native';
 import {
   createTriggerNotification,
   enableNotifications,
-} from '../libs/Notifications';
+} from '../libs/Notifications/notifee.ts';
 
 export const MainNotificationsScreen = () => {
   const [notificationsEnabled, setNotificationsEnabled] = useState(false);

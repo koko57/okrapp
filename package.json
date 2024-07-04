@@ -12,6 +12,7 @@
   "dependencies": {
     "@notifee/react-native": "^7.8.2",
     "@react-native-firebase/app": "^19.2.2",
+    "@react-native-firebase/messaging": "^20.1.0",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
     "@shopify/react-native-skia": "^0.1.240",
