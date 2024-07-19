@@ -13,6 +13,7 @@ import {
   requestUserPermission,
   getFCMToken,
 } from './src/libs/Notifications/firebase.ts';
+import {linking} from './src/libs/Navigation/config.ts';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -43,7 +44,7 @@ export const App = () => {
 
   return (
     <GestureHandlerRootView style={{flex: 1}}>
-      <NavigationContainer>
+      <NavigationContainer linking={linking}>
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Animations" component={AnimationNavigator} />
